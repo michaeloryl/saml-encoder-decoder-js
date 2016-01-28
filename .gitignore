@@ -1,0 +1,8 @@
+node_modules
+.idea
+.idea/workspace.xml
+*.iml
+npm-debug.log
+certs
+authorization-server/temp.json
+node_modules/
