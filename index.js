@@ -1,3 +1,4 @@
+/* global Buffer */
 var zlib = require('zlib');
 var async = require('async');
 // Deflate 
@@ -8,9 +9,9 @@ var str = '<?xml version="1.0" encoding="UTF-8"?><samlp:AuthnRequest     xmlns:s
 console.log("ORIGINAL:\n", str);
 
 async.waterfall([
-    async.apply(zEncodeForSaml, str),
+    async.apply(encodeForSaml, str),
     encodeCallback,
-    zDecodeForSaml,
+    decodeForSaml,
     decodeCallback
 ], function (err, result) {
     // result now equals 'done'
@@ -26,17 +27,10 @@ function decodeCallback(decoded, callback) {
   callback(null, decoded);
 }
 
-function zEncodeForSaml(input, cb) {
+function encodeForSaml(input, cb) {
   zlib.deflate(input, function(err, deflated) {
     if (!err) {
-      console.log('\n\nDeflated:\n', deflated);
-      console.log("TypeOf deflated:", typeof deflated);
-
       var b64 = deflated.toString('base64');
-
-      console.log('\n\nBase64 Encoded:\n', b64);
-      
-      //return cb(null, encodeURIComponent(b64));
       return cb(null, encodeURIComponent(b64));
     } else {
       console.log("Error while deflating");
@@ -45,17 +39,12 @@ function zEncodeForSaml(input, cb) {
   });
 }
 
-function zDecodeForSaml(encoded, cb) {
-  //var unB64 = new Buffer(decodeURIComponent(str), 'base64').toString('utf8')
+function decodeForSaml(encoded, cb) {
   var deflated = new Buffer(decodeURIComponent(encoded), 'base64')
-  console.log('\n\nBase64 decoded:\n', deflated);
-
   zlib.unzip(deflated, function(err, inflated) {
     if (!err) {
-      console.log('\n\nInflated:\n', inflated);
       return cb(null, inflated.toString('ascii'));
     } else {
-      console.log("Error while inflating");
       return cb(err);
     }
   });
