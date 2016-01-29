@@ -28,7 +28,7 @@ function decodeCallback(decoded, callback) {
 }
 
 function encodeForSaml(input, cb) {
-  zlib.deflate(input, function(err, deflated) {
+  zlib.deflateRaw(input, function(err, deflated) {
     if (!err) {
       var b64 = deflated.toString('base64');
       return cb(null, encodeURIComponent(b64));
