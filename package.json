@@ -1,7 +1,7 @@
 {
-  "name": "saml",
+  "name": "saml-encoder-decoder-js",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node.js module for encoding and decoding SAML request and response payloads for redirect or POST bindings",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,9 @@
   "author": "Michael Oryl",
   "license": "ISC",
   "dependencies": {
+    "async": "^1.5.2"
+  },
+  "devDependencies": {
     "async": "^1.5.2"
   }
 }
