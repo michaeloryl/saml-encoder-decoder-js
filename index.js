@@ -40,11 +40,13 @@ function encodeForSaml(input, cb) {
 }
 
 function decodeForSaml(encoded, cb) {
-  var deflated = new Buffer(decodeURIComponent(encoded), 'base64')
+  var deflated = new Buffer(decodeURIComponent(encoded), 'base64');
+  
   zlib.unzip(deflated, function(err, inflated) {
     if (!err) {
       return cb(null, inflated.toString('ascii'));
     } else {
+      console.log("Error while inflating");
       return cb(err);
     }
   });
