@@ -9,6 +9,7 @@
   "author": "Michael Oryl",
   "license": "ISC",
   "dependencies": {
+    "async": "^1.5.2",
     "pako": "^0.2.8"
   }
 }
