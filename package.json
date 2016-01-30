@@ -1,6 +1,6 @@
 {
   "name": "saml-encoder-decoder-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Node.js module for encoding and decoding SAML request and response payloads for redirect or POST bindings",
   "main": "index.js",
   "scripts": {
@@ -12,8 +12,8 @@
   },
   "devDependencies": {
     "async": "^1.5.2",
-    "mocha": "^2.4.5",
-    "should": "^8.2.1"
+    "mocha": "*",
+    "chai": "*"
   },
   "repository": {
     "type": "git",

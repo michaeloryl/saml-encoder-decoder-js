@@ -1,4 +1,4 @@
-var should = require('should');
+var should = require('chai').should();
 var saml = require('../');
 
 var encodedRedirect = "fZJbU8IwEIX%2FSibvvYCiTobioAwjM146Un3wLaRLTU2yNZtS%2FfcWkEFfeN3snvOd3Yyvv6xhG%2FCk0WV8EKecgVNYaldl%2FKWYR1f8ejImaU0jpm14d8%2Fw2QIF1s85EruHjLfeCZSkSThpgURQYjl9uBfDOBWNx4AKDWeLWcZlVeKqVmv94QCtXdfSlsqAq1WjaluV1co2VW2Rs9cD1HALtSBqYeEoSBf6UppeRul5NLwoBmdiNBCjizfO8l%2BnG%2B32%2FKewVvsmEndFkUf507LYCWx0Cf6x7854hVgZiBVazqZE4EOPc4uOWgt%2BCX6jFbw832f8PYSGRJJ0XRcfhxKZEJoOVrHDRCraZsglkd702sG3wPd7Fbto%2Fs9CT4PLAwqfHM3GyR%2Bpw722MRazHI1W32xqDHa3HmQ42LM5eivDabdtRZfRetcqWkcNKL3WUHKWTPau%2Fz%2FG5Ac%3D";
