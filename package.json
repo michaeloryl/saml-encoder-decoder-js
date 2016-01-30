@@ -9,7 +9,6 @@
   "author": "Michael Oryl",
   "license": "ISC",
   "dependencies": {
-    "async": "^1.5.2"
   },
   "devDependencies": {
     "async": "^1.5.2",
