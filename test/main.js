@@ -80,25 +80,7 @@ describe('Null/blank error handling', function() {
   });
 });
 
-describe('Invalid data error handling', function() {
-  it('should throw an error encoding blank post strings', function(done) {
-    saml.encodeSamlPost("", function(err, data) {
-      should.exist(err);
-      done();
-    })
-  });
-  it('should throw an error decoding null post strings', function(done) {
-    saml.decodeSamlPost("12345"+encodedPost, function(err, data) {
-      should.exist(err);
-      done();
-    })
-  });
-  it('should throw an error encoding blank redirect strings', function(done) {
-    saml.encodeSamlRedirect("", function(err, data) {
-      should.exist(err);
-      done();
-    })
-  });
+describe('Invalid data decoding error handling', function() {
   it('should throw an error decoding invalid redirect strings', function(done) {
     saml.decodeSamlRedirect("12345"+encodedRedirect, function(err, data) {
       should.exist(err);
