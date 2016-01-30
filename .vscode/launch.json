@@ -1,31 +1,49 @@
 {
-	"version": "0.2.0",
-	"configurations": [
-		{
-			"name": "Launch",
-			"type": "node",
-			"request": "launch",
-			"program": "demo-post.js",
-			"stopOnEntry": false,
-			"args": [],
-			"cwd": ".",
-			"runtimeExecutable": null,
-			"runtimeArgs": [
-				"--nolazy"
-			],
-			"env": {
-				"NODE_ENV": "development"
-			},
-			"externalConsole": false,
-			"sourceMaps": false,
-			"outDir": null
-		},
-		{
-			"name": "Attach",
-			"type": "node",
-			"request": "attach",
-			"port": 5858
-		}
-
-	]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "POST Demo",
+      "type": "node",
+      "request": "launch",
+      "program": "demo-post.js",
+      "stopOnEntry": false,
+      "args": [],
+      "cwd": ".",
+      "runtimeExecutable": null,
+      "runtimeArgs": [
+        "--nolazy"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "externalConsole": false,
+      "sourceMaps": false,
+      "outDir": null
+    },
+    {
+      "name": "Redirect Demo",
+      "type": "node",
+      "request": "launch",
+      "program": "demo-redirect.js",
+      "stopOnEntry": false,
+      "args": [],
+      "cwd": ".",
+      "runtimeExecutable": null,
+      "runtimeArgs": [
+        "--nolazy"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "externalConsole": false,
+      "sourceMaps": false,
+      "outDir": null
+    },
+    {
+      "name": "Node remote attach",
+      "type": "node",
+      "request": "attach",
+      "port": 5858
+    }
+  ]
 }
