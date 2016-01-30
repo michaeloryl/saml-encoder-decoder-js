@@ -34,9 +34,9 @@ function decodeSamlRedirect(encoded, cb) {
 }
 
 function encodeSamlPost(input, cb) {
-  return cb(null, encodeURIComponent(new Buffer(input).toString('base64')));
+  return cb(null, new Buffer(input).toString('base64'));
 }
 
 function decodeSamlPost(encoded, cb) {
-  return cb(null, new Buffer(decodeURIComponent(encoded), 'base64').toString('ascii'));
+  return cb(null, new Buffer(encoded, 'base64').toString('ascii'));
 }
