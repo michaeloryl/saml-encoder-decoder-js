@@ -11,7 +11,7 @@ To use these routines you first need to install the dependency:
 
 Once the module has been installed, require it into your application:
 
-    var saml = require('saml-encoder-decoder-js');
+    var saml = require('saml-encoder-decoder-js');
 
 At that point, you can pass your SAML request or response XML to the redirect or POST binding encoding routines.
 
