@@ -9,7 +9,7 @@ module.exports = {
 };
 
 function encodeSamlRedirect(input, cb) {
-  if (input == null || input == "") {
+  if (input == null || input === '') {
     return cb(new Error('Cannot encode null string'));
   }
   zlib.deflateRaw(input, function (err, deflated) {
@@ -23,7 +23,7 @@ function encodeSamlRedirect(input, cb) {
 }
 
 function decodeSamlRedirect(encoded, cb) {
-  if (encoded == null || encoded == "") {
+  if (encoded == null || encoded === '') {
     return cb(new Error('Cannot decode null string'));
   }
   var deflated = new Buffer(decodeURIComponent(encoded), 'base64');
@@ -38,14 +38,14 @@ function decodeSamlRedirect(encoded, cb) {
 }
 
 function encodeSamlPost(input, cb) {
-  if (input == null || input == "") {
+  if (input == null || input === '') {
     return cb(new Error('Cannot encode null string'));
   }
   return cb(null, new Buffer(input).toString('base64'));
 }
 
 function decodeSamlPost(encoded, cb) {
-  if (encoded == null || encoded == "") {
+  if (encoded == null || encoded === '') {
     return cb(new Error('Cannot decode null string'));
   }
   return cb(null, new Buffer(encoded, 'base64').toString('ascii'));

@@ -4,16 +4,15 @@
   "description": "Node.js module for encoding and decoding SAML request and response payloads for redirect or POST bindings",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "mocha"
   },
   "author": "Michael Oryl",
-  "license": "ISC",
-  "dependencies": {
-  },
+  "license": "GPL-2.0-only",
+  "dependencies": {},
   "devDependencies": {
     "async": "^1.5.2",
-    "mocha": "*",
-    "chai": "*"
+    "chai": "^4.3.7",
+    "mocha": "^10.1.0"
   },
   "repository": {
     "type": "git",
