@@ -1,13 +1,13 @@
 {
   "name": "saml-encoder-decoder-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Node.js module for encoding and decoding SAML request and response payloads for redirect or POST bindings",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
   },
   "author": "Michael Oryl",
-  "license": "ISC",
+  "license": "GPL-2.0-only",
   "dependencies": {
   },
   "devDependencies": {
