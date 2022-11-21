@@ -11,7 +11,7 @@ To use these routines you first need to install the dependency:
 
 Once the module has been installed, require it into your application:
 
-    var saml = require('saml');
+    var saml = require('saml-encoder-decoder-js');
 
 At that point, you can pass your SAML request or response XML to the redirect or POST binding encoding routines.
 
@@ -19,13 +19,13 @@ At that point, you can pass your SAML request or response XML to the redirect or
       if (!err) {
         console.log("Redirect encoded string", encoded);
       }
-    }
+    });
 
     saml.encodeSamlPost(xml, function(err, encoded) {
       if (!err) {
         console.log("POST encoded string", encoded);
       }
-    }
+    });
 
 If, on the other hand, you need to decode previously encoded data, you would handle that like this:
 
@@ -33,13 +33,13 @@ If, on the other hand, you need to decode previously encoded data, you would han
       if (!err) {
         console.log("Redirect decoded XML", xml);
       }
-    }
+    });
 
     saml.decodeSamlPost(xml, function(err, xml) {
       if (!err) {
         console.log("POST decoded XML", xml);
       }
-    }
+    });
 
 ## Demo code
 
